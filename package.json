@@ -1,7 +1,7 @@
 {
-  "name": "auditor",
+  "name": "todo",
   "version": "1.0.0",
-  "description": "Scan websites for GPC compliance.",
+  "description": "TODO",
   "main": "index.js",
   "license": "UNLICENSED",
   "devDependencies": {
