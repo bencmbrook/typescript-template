@@ -5,7 +5,7 @@
   "description": "TODO",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "tsx src/main.tsx"
+    "start": "tsx src/main.ts"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
