@@ -4,10 +4,7 @@
  * @type {import('prettier').Options}
  */
 const prettierConfig = {
-  plugins: [
-    require.resolve(`@trivago/prettier-plugin-sort-imports`),
-    require.resolve(`prettier-plugin-style-order`),
-  ],
+  plugins: [require.resolve(`@trivago/prettier-plugin-sort-imports`)],
   singleQuote: true,
   // @ts-ignore option for @trivago/prettier-plugin-sort-imports
   importOrderSeparation: true,

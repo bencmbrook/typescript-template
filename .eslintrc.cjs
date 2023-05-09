@@ -5,7 +5,14 @@
  */
 const eslintConfig = {
   root: true,
-  extends: ['plugin:prettier/recommended'],
+  extends: ['eslint:recommended'],
+  parserOptions: {
+    ecmaVersion: 'latest',
+  },
+  env: {
+    es6: true,
+    node: true,
+  },
 };
 
 module.exports = eslintConfig;
