@@ -10,7 +10,7 @@
     "**/builds": true,
     "**/.caches": true,
     "**/.pnp.*": true,
-    "**/*.svg": true,
+    "**/*.svg": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
@@ -20,7 +20,14 @@
   ],
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "eslint.options": {
-    "extensions": [".js", ".jsx", "md", ".mdx", ".ts", ".tsx"]
+    "extensions": [
+      ".js",
+      ".jsx",
+      "md",
+      ".mdx",
+      ".ts",
+      ".tsx"
+    ]
   },
   "eslint.validate": [
     "markdown",
@@ -55,5 +62,8 @@
   ],
   "todohighlight.isEnable": true,
   "npm.packageManager": "yarn",
-  "eslint.packageManager": "yarn"
+  "eslint.packageManager": "yarn",
+  "eslint.nodePath": ".yarn/sdks",
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
+  "typescript.tsdk": ".yarn/sdks/typescript/lib"
 }
