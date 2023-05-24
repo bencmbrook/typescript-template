@@ -20,14 +20,7 @@
   ],
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "eslint.options": {
-    "extensions": [
-      ".js",
-      ".jsx",
-      "md",
-      ".mdx",
-      ".ts",
-      ".tsx"
-    ]
+    "extensions": [".js", ".jsx", "md", ".mdx", ".ts", ".tsx"]
   },
   "eslint.validate": [
     "markdown",
@@ -46,7 +39,9 @@
   },
   // vscode-remark requires Markdown language. Come back when vscode-mdx improves in 2023
   "files.associations": {
-    "*.mdx": "markdown"
+    "*.mdx": "markdown",
+    ".env.*": "dotenv",
+    ".env": "dotenv"
   },
   "eslint.trace.server": "messages",
   "javascript.preferences.quoteStyle": "single",
