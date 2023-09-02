@@ -1,6 +1,7 @@
 {
   "name": "todo",
   "private": true,
+  "type": "module",
   "version": "1.0.0",
   "description": "TODO",
   "license": "UNLICENSED",
@@ -10,14 +11,14 @@
     "upgrades": "yarn dlx @yarnpkg/sdks"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
     "@tsconfig/node18": "^18.2.1",
     "@tsconfig/strictest": "^2.0.2",
     "@types/node": "~18.17",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
     "eslint": "^8.48.0",
-    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-prettier": "^9.0.0",
     "prettier": "^2.8.3",
     "tsx": "^3.12.2",
     "typescript": "^5.2.2"
