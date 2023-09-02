@@ -12,24 +12,6 @@
     "**/.pnp.*": true,
     "**/*.svg": true
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": [
-    "source.addMissingImports",
-    "source.fixAll.eslint"
-  ],
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "eslint.options": {
-    "extensions": [".js", ".jsx", "md", ".mdx", ".ts", ".tsx"]
-  },
-  "eslint.validate": [
-    "markdown",
-    "mdx",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
   "[mdx]": {
     "editor.quickSuggestions": {
       "other": true,
@@ -43,9 +25,27 @@
     ".env.*": "dotenv",
     ".env": "dotenv"
   },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": [
+    "source.addMissingImports",
+    "source.fixAll.eslint"
+  ],
+  "eslint.options": {
+    "extensions": [".js", ".jsx", "md", ".mdx", ".ts", ".tsx"]
+  },
+  "eslint.validate": [
+    "markdown",
+    "mdx",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "eslint.trace.server": "messages",
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
   "workbench.iconTheme": "vscode-icons",
   "todohighlight.keywords": [
     "TODO",
@@ -57,7 +57,6 @@
   ],
   "todohighlight.isEnable": true,
   "npm.packageManager": "yarn",
-  "eslint.packageManager": "yarn",
   "eslint.nodePath": ".yarn/sdks",
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
   "typescript.tsdk": ".yarn/sdks/typescript/lib"
