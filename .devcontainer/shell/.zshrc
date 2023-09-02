@@ -14,8 +14,9 @@ antigen use oh-my-zsh
 # ANTIGEN PLUGINS #
 ###################
 # Yarn scripts autocomplete
+antigen bundle git
 antigen bundle yarn
-antigen bundle lukechilds/zsh-nvm
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Apply antigen
 antigen apply
