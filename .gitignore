@@ -6,6 +6,9 @@ tmp/
 # TypeScript incremental compilation cache
 *.tsbuildinfo
 
+# zsh build files
+*.zwc
+
 # dependencies
 /node_modules
 /.pnp
