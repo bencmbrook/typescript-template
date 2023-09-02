@@ -3,11 +3,9 @@
 {
   "name": "Node.js & TypeScript",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-18-bookworm",
-  "features": {
-    "ghcr.io/devcontainers-contrib/features/vercel-cli:1": {},
-    "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {}
-  },
+  "build": { "dockerfile": "Dockerfile" },
+
+  "features": {},
   "customizations": {
     "vscode": {
       "extensions": [
@@ -15,8 +13,17 @@
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "vscode-icons-team.vscode-icons",
-        "wayou.vscode-todo-highlight"
-      ]
+        "wayou.vscode-todo-highlight",
+        "tamasfe.even-better-toml"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/usr/bin/zsh"
+          }
+        }
+      }
     }
   }
 
