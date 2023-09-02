@@ -17,6 +17,7 @@
         "tamasfe.even-better-toml"
       ],
       "settings": {
+        "extensions.ignoreRecommendations": true,
         "terminal.integrated.defaultProfile.linux": "zsh",
         "terminal.integrated.profiles.linux": {
           "zsh": {
