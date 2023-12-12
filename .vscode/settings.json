@@ -47,17 +47,8 @@
   "typescript.preferences.quoteStyle": "single",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "workbench.iconTheme": "vscode-icons",
-  "todohighlight.keywords": [
-    "TODO",
-    "todo",
-    "fixme",
-    "FIXME",
-    "NOT IMPLEMENTED",
-    "NotImplementedError"
-  ],
-  "todohighlight.isEnable": true,
   "npm.packageManager": "yarn",
   "eslint.nodePath": ".yarn/sdks",
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
   "typescript.tsdk": ".yarn/sdks/typescript/lib"
 }

@@ -1,6 +1,6 @@
 # Docker image
-ARG VARIANT=18-bookworm
-FROM mcr.microsoft.com/devcontainers/typescript-node:1-${VARIANT}
+ARG VARIANT=20-bullseye
+FROM mcr.microsoft.com/devcontainers/typescript-node:${VARIANT}
 
 # Install nerd font
 RUN curl -fLo "/usr/local/share/fonts/FiraCode Nerd Font Retina.ttf" \
