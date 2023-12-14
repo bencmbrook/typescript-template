@@ -43,7 +43,7 @@ yarn-error.log*
 # vercel
 .vercel
 
-# yarn v2 (node-modules)
+# yarn v2+
 .pnp.*
 .yarn/*
 !.yarn/patches
