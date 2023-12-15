@@ -10,7 +10,8 @@
     "**/builds": true,
     "**/.caches": true,
     "**/.pnp.*": true,
-    "**/*.svg": true
+    "**/*.svg": true,
+    ".devcontainer/shell": true
   },
   "[mdx]": {
     "editor.quickSuggestions": {

@@ -5,9 +5,18 @@
   "version": "1.0.0",
   "description": "TODO",
   "license": "UNLICENSED",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "del dist && tsc",
     "start": "tsx src/main.ts",
-    "typecheck": "tsc --noEmit",
+    "test": "tsx test/index.test.ts",
+    "lint": "concurrently -c auto \"yarn:lint:*\"",
+    "lint:prettier": "prettier --check . --loglevel warn",
+    "lint:types": "tsc --noEmit",
     "upgrades": "yarn dlx @yarnpkg/sdks"
   },
   "devDependencies": {
@@ -18,6 +27,8 @@
     "@types/node": "20.10.x",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
+    "concurrently": "^8.2.2",
+    "del-cli": "^5.1.0",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "prettier": "^2.8.8",
