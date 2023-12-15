@@ -13,7 +13,7 @@
   "scripts": {
     "build": "del dist && tsc",
     "start": "tsx src/main.ts",
-    "test": "tsx test/index.test.ts",
+    "test": "tsx --test test/**.test.ts",
     "lint": "concurrently -c auto \"yarn:lint:*\"",
     "lint:prettier": "prettier --check . --loglevel warn",
     "lint:types": "tsc --noEmit",
