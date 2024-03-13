@@ -2,4 +2,4 @@
 
 Starter template for TypeScript projects
 
-tsx, Yarn PnP with Zero Installs, Node 20, ESLint, Prettier
+tsx, Node 20, ESLint, Prettier

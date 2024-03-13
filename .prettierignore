@@ -1,7 +1,5 @@
 .next
-.yarn
-.pnp.cjs
-.pnp.loader.mjs
+pnpm-lock.yaml
 *.svg
 node_modules
 .depcheckrc

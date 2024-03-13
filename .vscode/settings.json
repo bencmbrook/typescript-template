@@ -2,9 +2,7 @@
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "search.exclude": {
-    "yarn.lock": true,
     ".next": true,
-    "**/.yarn": true,
     "**/tsconfig.tsbuildinfo": true,
     "**/build": true,
     "**/builds": true,
@@ -54,9 +52,5 @@
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "workbench.iconTheme": "vscode-icons",
-  "npm.packageManager": "yarn",
-  "eslint.nodePath": ".yarn/sdks",
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
-  "typescript.tsdk": ".yarn/sdks/typescript/lib"
+  "workbench.iconTheme": "vscode-icons"
 }
