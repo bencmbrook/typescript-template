@@ -5,13 +5,25 @@
   "version": "1.0.0",
   "description": "TODO",
   "license": "UNLICENSED",
-  "exports": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/cjs/index.cjs",
+  "types": "./dist/cjs/index.d.cts",
+  "module": "./dist/esm/index.js",
+  "exports": {
+    "import": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
+    },
+    "require": {
+      "types": "./dist/cjs/index.d.cts",
+      "default": "./dist/cjs/index.cjs"
+    }
+  },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
-    "build": "del dist && tsc",
+    "build": "del dist && rollup -c",
     "start": "tsx src/main.ts",
     "test": "tsx --test test/**.test.ts",
     "lint": "concurrently -c auto \"pnpm:lint:*\"",
@@ -21,6 +33,7 @@
   "devDependencies": {
     "@eslint/js": "^8.57.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@tsconfig/node20": "^20.1.2",
     "@tsconfig/strictest": "^2.0.3",
     "@types/eslint": "^8.56.5",
@@ -32,6 +45,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-unicorn": "^51.0.1",
     "prettier": "^3.2.5",
+    "rollup": "^4.13.0",
     "tsx": "^4.7.1",
     "typescript": "^5.4.2",
     "typescript-eslint": "^7.2.0"
