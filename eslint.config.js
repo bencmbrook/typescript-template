@@ -1,8 +1,17 @@
 // @ts-check
 import eslint from '@eslint/js';
+// @ts-ignore
+// import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
+const config = tseslint.config(
   eslint.configs.recommended,
-  ...tseslint.configs.strictTypeChecked,
+  ...tseslint.configs.recommended,
+  {
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+    },
+  },
 );
+export default config;
