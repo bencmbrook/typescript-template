@@ -9,7 +9,6 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "arcanis.vscode-zipfs",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "vscode-icons-team.vscode-icons",
