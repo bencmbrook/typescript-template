@@ -31,8 +31,8 @@
     "lint:types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@eslint/js": "^8.57.0",
-    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+    "@eslint/js": "^8.57.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
     "@rollup/plugin-typescript": "^11.1.6",
     "@tsconfig/node20": "^20.1.2",
     "@tsconfig/strictest": "^2.0.3",
@@ -44,7 +44,7 @@
     "del-cli": "^5.1.0",
     "eslint": "^8.57.0",
     "eslint-plugin-unicorn": "^51.0.1",
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.3",
     "rollup": "^4.13.0",
     "tsx": "^4.7.1",
     "typescript": "^5.4.2",

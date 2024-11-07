@@ -15,7 +15,6 @@ const eslintConfig = tseslint.config(
     languageOptions: {
       parserOptions: {
         project: ['./tsconfig.eslint.json', './tsconfig.json'],
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         tsconfigRootDir: import.meta.dirname,
       },
     },

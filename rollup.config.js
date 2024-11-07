@@ -1,7 +1,7 @@
 // @ts-check
 import { builtinModules } from 'node:module';
-import packageJson from './package.json' assert { type: "json" };
 import typescript from '@rollup/plugin-typescript';
+import packageJson from './package.json' with { type: 'json' };
 
 /**
  * @type {import('rollup').RollupOptions}
@@ -23,7 +23,7 @@ const config = {
   plugins: [typescript()],
   external: [
     ...builtinModules,
-    ...(Object.keys(packageJson.devDependencies)),
+    ...Object.keys(packageJson.devDependencies),
     // ...(Object.keys(packageJson.peerDependencies)),
     // ...(Object.keys(packageJson.dependencies)),
   ],
