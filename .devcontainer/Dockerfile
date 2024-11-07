@@ -14,3 +14,6 @@ RUN echo 'source $CODESPACE_VSCODE_FOLDER/.devcontainer/shell/.zshrc' > /home/no
 
 # Set zsh as the main shell
 RUN chsh -s /usr/bin/zsh
+
+# Install Node version set in `.nvrmc`
+RUN nvm install && nvm use
