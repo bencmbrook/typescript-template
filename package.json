@@ -39,7 +39,7 @@
     "@types/eslint": "^8.56.12",
     "@types/eslint__eslintrc": "^2.1.2",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "20.11.30",
+    "@types/node": "~20.11.30",
     "concurrently": "^8.2.2",
     "del-cli": "^5.1.0",
     "eslint": "^8.57.1",

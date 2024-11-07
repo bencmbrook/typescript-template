@@ -30,7 +30,7 @@ devDependencies:
     specifier: ^8.42.3
     version: 8.42.3
   '@types/node':
-    specifier: 20.11.30
+    specifier: ~20.11.30
     version: 20.11.30
   concurrently:
     specifier: ^8.2.2
