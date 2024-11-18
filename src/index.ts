@@ -1,5 +1,6 @@
-import type { Input } from './types.js';
+import { Input } from './validation.js';
 
 export function sayHello(input: Input): void {
-  console.log('Hello', input.message);
+  const { message } = Input.parse(input);
+  console.log('Hello', message);
 }

@@ -4,6 +4,8 @@ Starter template for TypeScript projects. Using tsx, Node 20, ESLint, Prettier.
 
 Publishable Node modules (from `src/index.ts`) and a CLI (from `bin/cli.ts`) which is usable by npx.
 
+The only dependency is `zod` (you can [remove it](#remove-zod)) and `consola` (for the CLI). Check out [extra boilerplate](#extra-boilerplate) for other common modifications.
+
 ## Usage
 
 ### TypeScript
@@ -62,3 +64,10 @@ Add to [package.json](package.json):
 ```
 
 Then call `pnpm script ./scripts/my-script.ts`.
+
+#### Remove zod
+
+```sh
+pnpm remove zod
+pnpm del src/validation.ts
+```

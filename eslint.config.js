@@ -18,6 +18,9 @@ const eslintConfig = tseslint.config(
         tsconfigRootDir: import.meta.dirname,
       },
     },
+    linterOptions: {
+      reportUnusedDisableDirectives: true,
+    },
   },
 );
 
