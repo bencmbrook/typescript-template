@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "description": "TODO",
   "license": "UNLICENSED",
+  "bin": "./dist/cli/cli.mjs",
   "main": "./dist/cjs/index.cjs",
   "types": "./dist/cjs/index.d.cts",
   "module": "./dist/esm/index.js",
@@ -20,11 +21,12 @@
   },
   "files": [
     "dist",
-    "src"
+    "src",
+    "bin"
   ],
   "scripts": {
     "build": "del dist && rollup -c",
-    "start": "tsx src/main.ts",
+    "start": "tsx bin/cli.ts",
     "test": "tsx --test test/**.test.ts",
     "lint": "concurrently -c auto \"pnpm:lint:*\"",
     "lint:prettier": "prettier --check . --log-level warn",
