@@ -27,6 +27,7 @@
   "scripts": {
     "build": "del dist && rollup -c",
     "start": "tsx bin/cli.ts",
+    "script": "tsx",
     "test": "tsx --test test/**.test.ts",
     "lint": "concurrently -c auto \"pnpm:lint:*\"",
     "lint:prettier": "prettier --check . --log-level warn",

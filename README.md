@@ -40,23 +40,9 @@ pnpm start
 pnpm publish
 ```
 
+This runs lint, test, and build before publishing.
+
 ### Extra boilerplate
-
-#### Add `scripts/` folder
-
-```sh
-mkdir -p scripts
-```
-
-Add to [package.json](package.json):
-
-```diff
-  "scripts": {
-+   "script": "tsx"
-  }
-```
-
-Then call `pnpm script ./scripts/my-script.ts`.
 
 #### Add dotenv with `scripts/` folder support
 
