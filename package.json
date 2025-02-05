@@ -7,11 +7,7 @@
   "version": "1.0.1",
   "description": "TODO",
   "license": "UNLICENSED",
-  "files": [
-    "dist",
-    "src",
-    "bin"
-  ],
+  "bin": "./dist/esm/bin/cli.mjs",
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -28,7 +24,11 @@
   "main": "./dist/commonjs/index.js",
   "types": "./dist/commonjs/index.d.ts",
   "module": "./dist/esm/index.js",
-  "bin": "./dist/esm/bin/cli.mjs",
+  "files": [
+    "dist",
+    "src",
+    "bin"
+  ],
   "scripts": {
     "dev": "tsx --watch src/index.ts",
     "cli": "tsx src/bin/cli.ts",
