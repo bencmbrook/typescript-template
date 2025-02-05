@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/lib/install_dependencies
+        timeout-minutes: 3
+
+      - name: lint
+        run: pnpm run lint
+
+      - name: test
+        run: pnpm run test
+
+      - name: build
+        run: pnpm run build
+
+      - name: publint
+        run: pnpm run publint
