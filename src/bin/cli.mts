@@ -1,7 +1,7 @@
 import { parseArgs } from 'node:util';
 import { createConsola } from 'consola';
-import { sayHello } from '../src/index.js';
-import { Input } from '../src/validation.js';
+import { Input } from '../helpers/validation.js';
+import { sayHello } from '../index.js';
 
 async function main() {
   const {

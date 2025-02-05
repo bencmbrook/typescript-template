@@ -1,8 +1,6 @@
 {
   "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node22/tsconfig"],
   "compilerOptions": {
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
     "types": ["node"],
     "outDir": "dist",
     "declaration": true,

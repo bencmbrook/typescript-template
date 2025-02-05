@@ -4,57 +4,59 @@
     "access": "public"
   },
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TODO",
   "license": "UNLICENSED",
-  "bin": "./dist/cli/cli.mjs",
-  "main": "./dist/cjs/index.cjs",
-  "types": "./dist/cjs/index.d.cts",
-  "module": "./dist/esm/index.js",
+  "bin": "./dist/esm/bin/cli.mjs",
   "exports": {
-    "import": {
-      "types": "./dist/esm/index.d.ts",
-      "default": "./dist/esm/index.js"
-    },
-    "require": {
-      "types": "./dist/cjs/index.d.cts",
-      "default": "./dist/cjs/index.cjs"
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/commonjs/index.d.ts",
+        "default": "./dist/commonjs/index.js"
+      }
     }
   },
+  "main": "./dist/commonjs/index.js",
+  "types": "./dist/commonjs/index.d.ts",
+  "module": "./dist/esm/index.js",
   "files": [
     "dist",
     "src",
     "bin"
   ],
   "scripts": {
-    "build": "del dist && rollup -c",
-    "start": "tsx bin/cli.ts",
-    "script": "tsx",
+    "dev": "tsx --watch src/index.ts",
+    "cli": "tsx src/bin/cli.ts",
+    "build": "tshy",
+    "script": "tsx --env-file=.env.local",
     "test": "tsx --test test/**.test.ts",
-    "lint": "concurrently -c auto \"pnpm:lint:*\"",
+    "lint": "pnpm run --parallel --aggregate-output \"/^lint:*/\"",
     "lint:prettier": "prettier --check . --log-level warn",
     "lint:types": "tsc --noEmit",
     "lint:test-types": "tsc --noEmit --project test/tsconfig.json",
     "lint:eslint": "eslint .",
     "format": "prettier --write .",
-    "prepublishOnly": "pnpm lint && pnpm test && pnpm build"
+    "prepublishOnly": "pnpm lint && pnpm test && pnpm build && pnpm publint"
   },
   "devDependencies": {
     "@eslint/js": "^8.57.1",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
-    "@rollup/plugin-typescript": "^11.1.6",
     "@tsconfig/node22": "^22.0.0",
     "@tsconfig/strictest": "^2.0.5",
     "@types/eslint": "^9.6.1",
     "@types/eslint__eslintrc": "^2.1.2",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "22.x",
-    "concurrently": "^8.2.2",
-    "del-cli": "^5.1.0",
     "eslint": "^9.18.0",
     "eslint-plugin-unicorn": "^56.0.1",
     "prettier": "^3.4.2",
-    "rollup": "^4.24.4",
+    "publint": "^0.3.3",
+    "tshy": "^3.0.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.21.0"
@@ -63,5 +65,11 @@
   "dependencies": {
     "consola": "^3.2.3",
     "zod": "^3.23.8"
+  },
+  "tshy": {
+    "exports": {
+      "./package.json": "./package.json",
+      ".": "./src/index.ts"
+    }
   }
 }

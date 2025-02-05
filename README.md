@@ -46,28 +46,9 @@ This runs lint, test, and build before publishing.
 
 ### Extra boilerplate
 
-#### Add dotenv with `scripts/` folder support
-
-```sh
-pnpm add -D dotenv-cli
-pnpm add dotenv
-touch .env.local
-mkdir -p scripts
-```
-
-Add to [package.json](package.json):
-
-```diff
-  "scripts": {
-+   "script": "dotenv -e .env.local -- tsx"
-  }
-```
-
-Then call `pnpm script ./scripts/my-script.ts`.
-
 #### Remove zod
 
 ```sh
 pnpm remove zod
-pnpm del src/validation.ts
+rm src/helpers/validation.ts
 ```
