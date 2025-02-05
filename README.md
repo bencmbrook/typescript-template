@@ -78,4 +78,6 @@ Edit `package.json`:
    "scripts": {
      "dev": "tsx --watch src/index.ts",
 -    "cli": "tsx src/bin/cli.mts",
+-    "build": "tshy && echo '#!/usr/bin/env node --input-type=module\n'\"$(cat ./dist/esm/bin/cli.mjs)\" > ./dist/esm/bin/cli.mjs",
++    "build": "tshy",
 ```
