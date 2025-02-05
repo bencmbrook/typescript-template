@@ -27,4 +27,4 @@ jobs:
         run: pnpm run build
 
       - name: publint
-        run: pnpm run publint
+        run: pnpm exec publint
