@@ -32,7 +32,7 @@
   "scripts": {
     "dev": "tsx --watch src/index.ts",
     "cli": "tsx src/bin/cli.ts",
-    "build": "del dist && tshy",
+    "build": "tshy",
     "script": "tsx --env-file=.env.local",
     "test": "tsx --test test/**.test.ts",
     "lint": "pnpm run --parallel --aggregate-output \"/^lint:*/\"",
@@ -52,7 +52,6 @@
     "@types/eslint__eslintrc": "^2.1.2",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "22.x",
-    "del-cli": "^5.1.0",
     "eslint": "^9.18.0",
     "eslint-plugin-unicorn": "^56.0.1",
     "prettier": "^3.4.2",

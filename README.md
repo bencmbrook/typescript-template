@@ -50,5 +50,5 @@ This runs lint, test, and build before publishing.
 
 ```sh
 pnpm remove zod
-pnpm del src/validation.ts
+rm src/helpers/validation.ts
 ```
