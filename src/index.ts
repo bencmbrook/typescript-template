@@ -1,4 +1,4 @@
-import { Input } from './validation.js';
+import { Input } from './helpers/validation.js';
 
 export function sayHello(input: Input): void {
   const { message } = Input.parse(input);

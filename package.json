@@ -7,19 +7,11 @@
   "version": "1.0.0",
   "description": "TODO",
   "license": "UNLICENSED",
-  "bin": "./dist/cli/cli.mjs",
-  "main": "./dist/cjs/index.cjs",
-  "types": "./dist/cjs/index.d.cts",
-  "module": "./dist/esm/index.js",
+  "bin": "./dist/bin/cli.js",
+  "types": "./dist/src/index.d.ts",
+  "module": "./dist/src/index.js",
   "exports": {
-    "import": {
-      "types": "./dist/esm/index.d.ts",
-      "default": "./dist/esm/index.js"
-    },
-    "require": {
-      "types": "./dist/cjs/index.d.cts",
-      "default": "./dist/cjs/index.cjs"
-    }
+    ".": "./dist/src/index.js"
   },
   "files": [
     "dist",
@@ -29,7 +21,7 @@
   "scripts": {
     "dev": "tsx --watch src/index.ts",
     "start": "tsx src/index.ts",
-    "build": "del dist && rollup -c",
+    "build": "del dist && tsc --project tsconfig.build.json",
     "script": "touch .env.local && tsx --env-file=.env.local",
     "cli": "tsx bin/cli.ts",
     "test": "tsx --test test/**.test.ts",
@@ -39,12 +31,11 @@
     "lint:test-types": "tsc --noEmit --project test/tsconfig.json",
     "lint:eslint": "eslint .",
     "format": "prettier --write .",
-    "prepublishOnly": "pnpm lint && pnpm test && pnpm build"
+    "prepublishOnly": "pnpm lint && pnpm test && pnpm build && pnpm publint"
   },
   "devDependencies": {
     "@eslint/js": "^8.57.1",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
-    "@rollup/plugin-typescript": "^11.1.6",
     "@tsconfig/node22": "^22.0.0",
     "@tsconfig/strictest": "^2.0.5",
     "@types/eslint": "^9.6.1",
@@ -55,7 +46,7 @@
     "eslint": "^9.18.0",
     "eslint-plugin-unicorn": "^56.0.1",
     "prettier": "^3.4.2",
-    "rollup": "^4.24.4",
+    "publint": "^0.3.3",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.21.0"
