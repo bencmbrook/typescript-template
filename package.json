@@ -4,7 +4,7 @@
     "access": "public"
   },
   "type": "module",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "TODO",
   "license": "UNLICENSED",
   "sideEffects": false,
@@ -33,7 +33,7 @@
   "scripts": {
     "dev": "tsx --watch src/index.ts",
     "cli": "tsx src/bin/cli.mts",
-    "build": "tshy && echo '#!/usr/bin/env node --input-type=module\n'\"$(cat ./dist/esm/bin/cli.mjs)\" > ./dist/esm/bin/cli.mjs",
+    "build": "tshy && echo '#!/usr/bin/env node\n'\"$(cat ./dist/esm/bin/cli.mjs)\" > ./dist/esm/bin/cli.mjs",
     "script": "tsx --env-file=.env.local",
     "test": "tsx --test test/**.test.ts",
     "lint": "pnpm run --parallel --aggregate-output \"/^lint:*/\"",
