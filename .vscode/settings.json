@@ -1,29 +1,20 @@
 {
-  "editor.tabSize": 2,
-  "editor.detectIndentation": false,
+  // General
   "search.exclude": {
-    ".next": true,
-    "**/tsconfig.tsbuildinfo": true,
-    "**/build": true,
-    "**/builds": true,
-    "**/.caches": true,
-    "**/.pnp.*": true,
-    "**/*.svg": true,
     ".devcontainer/shell": true
   },
-  "[mdx]": {
-    "editor.quickSuggestions": {
-      "other": true,
-      "comments": true,
-      "strings": true
-    }
-  },
-  // vscode-remark requires Markdown language. Come back when vscode-mdx improves in 2023
   "files.associations": {
-    "*.mdx": "markdown",
     ".env.*": "dotenv",
     ".env": "dotenv"
   },
+
+  // Editor
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+
+  // Formatting
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -42,9 +33,5 @@
     "typescriptreact"
   ],
   "eslint.trace.server": "messages",
-  "eslint.useFlatConfig": true,
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "workbench.iconTheme": "vscode-icons"
+  "eslint.useFlatConfig": true
 }
