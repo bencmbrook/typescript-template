@@ -24,11 +24,6 @@ const eslintConfig = tseslint.config(
     },
   },
   {
-    rules: {
-      'unicorn/number-literal-case': ['off'],
-    },
-  },
-  {
     ignores: ['dist'],
   },
 );
