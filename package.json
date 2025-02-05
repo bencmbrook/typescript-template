@@ -1,6 +1,5 @@
 {
   "name": "@bencmbrook/typescript-template",
-  "private": true,
   "type": "module",
   "version": "1.0.0",
   "description": "TODO",
