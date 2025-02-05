@@ -3,24 +3,33 @@ import eslint from '@eslint/js';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import tseslint from 'typescript-eslint';
 
+/**
+ * @type {import('@typescript-eslint/utils/ts-eslint').Linter.ConfigType}
+ */
 const eslintConfig = tseslint.config(
   eslint.configs.recommended,
+  eslintPluginUnicorn.configs['flat/recommended'],
   ...tseslint.configs.recommended,
   ...tseslint.configs.stylisticTypeChecked,
   ...tseslint.configs.strictTypeChecked,
-  // @ts-expect-error The type definition for the 'eslint-plugin-unicorn' plugin is missing
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
-  eslintPluginUnicorn.configs['flat/recommended'],
   {
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.eslint.json', './tsconfig.json'],
+        projectService: true,
         tsconfigRootDir: import.meta.dirname,
       },
     },
     linterOptions: {
       reportUnusedDisableDirectives: true,
     },
+  },
+  {
+    rules: {
+      'unicorn/number-literal-case': ['off'],
+    },
+  },
+  {
+    ignores: ['dist'],
   },
 );
 

@@ -1,5 +1,5 @@
 # Docker image
-ARG VARIANT=20-bullseye
+ARG VARIANT=22-bullseye
 FROM mcr.microsoft.com/devcontainers/typescript-node:${VARIANT}
 
 # Install nerd font

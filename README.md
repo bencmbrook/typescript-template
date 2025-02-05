@@ -1,6 +1,6 @@
 # typescript-template
 
-Starter template for TypeScript projects. Using tsx, Node 20, ESLint, Prettier.
+Starter template for TypeScript projects. Using tsx, Node 22, ESLint, Prettier.
 
 Publishable Node modules (from `src/index.ts`) and a CLI (from `bin/cli.ts`) which is usable by npx.
 

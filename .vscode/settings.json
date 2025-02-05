@@ -25,6 +25,9 @@
     ".env": "dotenv"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": [
     "source.addMissingImports",
@@ -39,7 +42,7 @@
     "typescriptreact"
   ],
   "eslint.trace.server": "messages",
-  "eslint.experimental.useFlatConfig": true,
+  "eslint.useFlatConfig": true,
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
   "typescript.enablePromptUseWorkspaceTsdk": true,

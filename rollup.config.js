@@ -3,6 +3,15 @@ import typescript from '@rollup/plugin-typescript';
 import packageJson from './package.json' with { type: 'json' };
 
 /**
+ * @type {import('rollup').RollupOptions}
+ */
+const commonConfig = {
+  external: [/^node:.*/, ...Object.keys(packageJson.dependencies)],
+  // @ts-expect-error - https://github.com/rollup/plugins/issues/1662
+  plugins: [typescript()],
+};
+
+/**
  * @type {import('rollup').RollupOptions[]}
  */
 const config = [
@@ -20,7 +29,7 @@ const config = [
         sourcemap: true,
       },
     ],
-    plugins: [typescript()],
+    ...commonConfig,
   },
   {
     input: 'bin/cli.ts',
@@ -32,7 +41,7 @@ const config = [
         sourcemap: true,
       },
     ],
-    plugins: [typescript()],
+    ...commonConfig,
   },
 ];
 export default config;
