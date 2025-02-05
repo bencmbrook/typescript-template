@@ -30,7 +30,7 @@ async function main() {
   consola.debug('Debug mode enabled:', debug);
 
   // Validate CLI arguments
-  const result = Input.safeParse(values);
+  const result = await Input.safeParseAsync(values);
   if (!result.success) {
     for (const issue of result.error.errors) {
       consola.error(
@@ -40,8 +40,10 @@ async function main() {
     return;
   }
 
+  // Call main function
   sayHello(result.data);
-  await Promise.resolve();
+
+  consola.success('Done!');
 }
 
 await main();
