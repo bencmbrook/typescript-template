@@ -52,3 +52,30 @@ This runs lint, test, and build before publishing.
 pnpm remove zod
 rm src/helpers/validation.ts
 ```
+
+#### Remove CLI
+
+```sh
+pnpm remove consola
+rm -rf src/bin
+```
+
+Edit `package.json`:
+
+```diff
+-  "bin": "./dist/esm/bin/cli.mjs",
+```
+
+```diff
+   "files": [
+     "dist",
+     "src",
+-    "bin"
+   ],
+```
+
+```diff
+   "scripts": {
+     "dev": "tsx --watch src/index.ts",
+-    "cli": "tsx src/bin/cli.ts",
+```
