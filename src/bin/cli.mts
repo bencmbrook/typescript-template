@@ -44,4 +44,4 @@ async function main() {
   await Promise.resolve();
 }
 
-void main();
+await main();
