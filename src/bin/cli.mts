@@ -1,7 +1,7 @@
 import { parseArgs } from 'node:util';
 import { createConsola } from 'consola';
-import { Input } from '../src/helpers/validation.js';
-import { sayHello } from '../src/index.js';
+import { Input } from '../helpers/validation.js';
+import { sayHello } from '../index.js';
 
 async function main() {
   const {
@@ -44,4 +44,4 @@ async function main() {
   await Promise.resolve();
 }
 
-await main();
+void main();

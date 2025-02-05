@@ -7,23 +7,33 @@
   "version": "1.0.0",
   "description": "TODO",
   "license": "UNLICENSED",
-  "bin": "./dist/bin/cli.js",
-  "types": "./dist/src/index.d.ts",
-  "module": "./dist/src/index.js",
-  "exports": {
-    ".": "./dist/src/index.js"
-  },
   "files": [
     "dist",
     "src",
     "bin"
   ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/commonjs/index.d.ts",
+        "default": "./dist/commonjs/index.js"
+      }
+    }
+  },
+  "main": "./dist/commonjs/index.js",
+  "types": "./dist/commonjs/index.d.ts",
+  "module": "./dist/esm/index.js",
+  "bin": "./dist/esm/bin/cli.mjs",
   "scripts": {
     "dev": "tsx --watch src/index.ts",
-    "start": "tsx src/index.ts",
-    "build": "del dist && tsc --project tsconfig.build.json",
-    "script": "touch .env.local && tsx --env-file=.env.local",
-    "cli": "tsx bin/cli.ts",
+    "cli": "tsx src/bin/cli.ts",
+    "build": "del dist && tshy",
+    "script": "tsx --env-file=.env.local",
     "test": "tsx --test test/**.test.ts",
     "lint": "pnpm run --parallel --aggregate-output \"/^lint:*/\"",
     "lint:prettier": "prettier --check . --log-level warn",
@@ -47,6 +57,7 @@
     "eslint-plugin-unicorn": "^56.0.1",
     "prettier": "^3.4.2",
     "publint": "^0.3.3",
+    "tshy": "^3.0.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.21.0"
@@ -55,5 +66,11 @@
   "dependencies": {
     "consola": "^3.2.3",
     "zod": "^3.23.8"
+  },
+  "tshy": {
+    "exports": {
+      "./package.json": "./package.json",
+      ".": "./src/index.ts"
+    }
   }
 }
