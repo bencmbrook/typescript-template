@@ -1,5 +1,8 @@
 {
   "name": "@bencmbrook/typescript-template",
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "version": "1.0.0",
   "description": "TODO",
