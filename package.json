@@ -7,6 +7,7 @@
   "version": "1.0.1",
   "description": "TODO",
   "license": "UNLICENSED",
+  "sideEffects": false,
   "bin": "./dist/esm/bin/cli.mjs",
   "exports": {
     "./package.json": "./package.json",
