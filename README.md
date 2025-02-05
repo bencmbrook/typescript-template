@@ -2,7 +2,7 @@
 
 Starter template for TypeScript projects. Using tsx, Node 22, ESLint, Prettier.
 
-Publishable Node modules (from `src/index.ts`) and a CLI (from `src/bin/cli.mts`) which is runnable via npx.
+Publishable Node modules (from `src/index.ts`) and a CLI (from `src/bin/cli.mts`) which is runnable via npx (you can try via `npx bencmbrook-typescript-template --message=world`).
 
 The only dependency is `zod` (you can [remove it](#remove-zod)) and `consola` (for the CLI). Check out [extra boilerplate](#extra-boilerplate) for other common modifications.
 
@@ -78,6 +78,6 @@ Edit `package.json`:
    "scripts": {
      "dev": "tsx --watch src/index.ts",
 -    "cli": "tsx src/bin/cli.mts",
--    "build": "tshy && echo '#!/usr/bin/env node --input-type=module\n'\"$(cat ./dist/esm/bin/cli.mjs)\" > ./dist/esm/bin/cli.mjs",
+-    "build": "tshy && echo '#!/usr/bin/env node\n'\"$(cat ./dist/esm/bin/cli.mjs)\" > ./dist/esm/bin/cli.mjs",
 +    "build": "tshy",
 ```
