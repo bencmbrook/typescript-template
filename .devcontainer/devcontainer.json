@@ -22,7 +22,8 @@
           "zsh": {
             "path": "/usr/bin/zsh"
           }
-        }
+        },
+        "terminal.integrated.fontFamily": "'FiraCodeNFM-Ret', Menlo"
       }
     }
   }
