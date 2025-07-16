@@ -8,7 +8,7 @@ import tseslint from 'typescript-eslint';
  */
 const eslintConfig = tseslint.config(
   eslint.configs.recommended,
-  eslintPluginUnicorn.configs['flat/recommended'],
+  eslintPluginUnicorn.configs.recommended,
   ...tseslint.configs.recommended,
   ...tseslint.configs.stylisticTypeChecked,
   ...tseslint.configs.strictTypeChecked,

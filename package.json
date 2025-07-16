@@ -45,27 +45,27 @@
     "prepublishOnly": "pnpm lint && pnpm test && pnpm build && pnpm publint"
   },
   "devDependencies": {
-    "@eslint/js": "^8.57.1",
-    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
-    "@tsconfig/node22": "^22.0.0",
+    "@eslint/js": "^9.31.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.5.1",
+    "@tsconfig/node22": "^22.0.2",
     "@tsconfig/strictest": "^2.0.5",
     "@types/eslint": "^9.6.1",
-    "@types/eslint__eslintrc": "^2.1.2",
-    "@types/eslint__js": "^8.42.3",
-    "@types/node": "22.x",
-    "eslint": "^9.18.0",
-    "eslint-plugin-unicorn": "^56.0.1",
-    "prettier": "^3.4.2",
-    "publint": "^0.3.3",
+    "@types/eslint__eslintrc": "^3.3.0",
+    "@types/eslint__js": "^9.14.0",
+    "@types/node": "~24.0.14",
+    "eslint": "^9.31.0",
+    "eslint-plugin-unicorn": "^59.0.1",
+    "prettier": "^3.6.2",
+    "publint": "^0.3.12",
     "tshy": "^3.0.2",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.3",
-    "typescript-eslint": "^8.21.0"
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.37.0"
   },
-  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0",
+  "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad",
   "dependencies": {
-    "consola": "^3.2.3",
-    "zod": "^3.23.8"
+    "consola": "^3.4.2",
+    "zod": "^4.0.5"
   },
   "tshy": {
     "exports": {

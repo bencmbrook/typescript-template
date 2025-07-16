@@ -32,7 +32,7 @@ async function main() {
   // Validate CLI arguments
   const result = await Input.safeParseAsync(values);
   if (!result.success) {
-    for (const issue of result.error.errors) {
+    for (const issue of result.error.issues) {
       consola.error(
         `\nInvalid input:\n - For argument "--${issue.path.join('.')}". Reason: ${issue.message}.`,
       );
