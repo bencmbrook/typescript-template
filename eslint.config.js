@@ -4,7 +4,7 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import tseslint from 'typescript-eslint';
 
 /**
- * @type {import('@typescript-eslint/utils/ts-eslint').Linter.ConfigType}
+ * @type {import('typescript-eslint').Config}
  */
 const eslintConfig = tseslint.config(
   eslint.configs.recommended,
